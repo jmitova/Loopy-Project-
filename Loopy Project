@@ -1,0 +1,89 @@
+ class Program 
+// I had a lot of trouble with programming this in visual studio. The program on my personal computer keep crashing, therefore the code might not be working property and its running errors
+	{
+    	static void Main(string[] args)
+    	{
+        	bool end = true;
+        	while (end == true)
+        	{
+//initialized variable start below
+            	double weight = 0;
+            	int menuChoice = 0;
+            	double ratio = 0;
+            	string Planet = "";
+
+//displaying menu 
+            	Console.WriteLine("Hello Alien!");
+            	Console.WriteLine("Please choose where you come from?");
+            	Console.WriteLine("\n1.Jupiter 2.Mars 3.Mercury");
+            	Console.WriteLine("\n4.Neptune 5.Pluto 6.Saturn");
+            	Console.WriteLine("\n7.Uranus 8. Venus");
+            	Console.Write("Where are you from again?");
+
+// user inputs information below
+            	menuChoice = int.Parse(Console.ReadLine());
+            	switch (menuChoice)
+// For this project I decided to use the switch case statement because i needed the program to do multiple decisions. I had multiple cases, ration and planets.
+//All the user input goes through different cases until it goes to the one that is preferred. It runs what even is in the case and it breaks out of the case
+            	{
+                	case 1:
+                    	ratio = 2.64;
+                    	Planet = "Jupiter";
+                    	break;
+
+                	case 2:
+                    	ratio = 0.38;
+                    	Planet = "Mars";
+                    	break;
+
+                	case 3:
+                    	ratio = 0.37;
+                    	Planet = "Mercury";
+                    	break;
+
+             	case 4:
+                    	ratio = 1.12;
+                    	Planet = "Neptune";
+                    	break;
+
+                	case 5:
+                    	ratio = 0.04;
+                    	Planet = "Pluto";
+                    	break;
+
+                	case 6:
+                    	ratio = 1.15;
+                    	Planet = "Saturn";
+                    	break;
+
+                	case 7:
+                    	ratio = 1.15;
+                    	Planet = "Uranus";
+                    	break;
+
+                	case 8:
+                    	ratio = 0.88;
+                    	Planet = "Venus";
+                    	break;
+              	 
+                // I am not sure why this part of the code is not working. Please advice
+                	default:
+                    	break;
+            	}
+            	Console.Write("\n Enter Your Weight Now: ");
+            	weight = double.Parse(Console.ReadLine());
+
+            	double EndW = 0;
+            	EndW = (ratio * weight);
+            	Console.WriteLine("\nYour weight on Earth is " + weight + " pounds, which is " + EndW + " Pounds on " + Planet + "\n");
+        	}
+        	Console.ReadLine();
+
+    	}
+	}
+}
+        
+    
+
+
+
